@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "pdfreader": "^1.2.14"
+  }
+}
