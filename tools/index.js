@@ -52,7 +52,7 @@ readPdf.then(inputLines => {
     const output = [];
     let entry = {};
     
-    const answerRegex = /^ ?[АБВГ]\./;
+    const answerRegex = /^ ?[АБВГ]/;
     const questionRegex = /^\d+\./;
 
     for (let i = 0; i < inputLines.length; i++) {
