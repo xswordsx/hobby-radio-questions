@@ -4,11 +4,10 @@
 	 width="400px" height="400px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#000000;stroke-width:7;}
-	.st1{fill:#FFFFFF;stroke:#000000;stroke-width:7;}
 </style>
-<line class="st0" x1="103.5" y1="200" x2="50" y2="200"/>
-<line class="st0" x1="296.5" y1="200" x2="350" y2="200"/>
-<line class="st0" x1="103.5" y1="200.4" x2="253.3" y2="113.9"/>
-<circle class="st1" cx="103.5" cy="200" r="20"/>
-<circle class="st1" cx="296.5" cy="200" r="20"/>
+<line class="st0" x1="83.5" y1="200" x2="50" y2="200"/>
+<line class="st0" x1="316.5" y1="200" x2="350" y2="200"/>
+<line class="st0" x1="121" y1="190.3" x2="253.3" y2="113.9"/>
+<circle class="st0" cx="103.5" cy="200" r="20"/>
+<circle class="st0" cx="296.5" cy="200" r="20"/>
 </svg>
