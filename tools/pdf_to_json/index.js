@@ -3,10 +3,15 @@ const input = process.argv[2];
 
 function remap_cyr(x) {
     switch (x) {
+        // Cyrillic letters
         case 'А': return 'A';
         case 'Б': return 'B';
         case 'В': return 'C';
         case 'Г': return 'D';
+
+        // Latin letters
+        case 'A': return 'A';
+        case 'B': return 'B';
     }
     return 'unknown (' + x + ')';
 }
@@ -52,8 +57,8 @@ readPdf.then(inputLines => {
     const output = [];
     let entry = {};
     
-    const answerRegex = /^ ?[АБВГ]/;
     const questionRegex = /^\d+\./;
+    const answerRegex = /^ ?[АБВГ]?!([а-яА-Я])/;
 
     for (let i = 0; i < inputLines.length; i++) {
         const line = inputLines[i];
@@ -76,7 +81,9 @@ readPdf.then(inputLines => {
                 i++;
                 qLine += ' ' + inputLines[i];
             }
-            entry = { question: qLine };
+            entry = {
+                question: qLine.replace(/\s{2,}/g, ' ').trim()
+            };
             entry.number = Number(entry.question.slice(0, entry.question.indexOf('.')));
             entry.correct = remap_cyr(entry.question[entry.question.length - 2]);
             entry.question = entry.question.slice(entry.question.indexOf(' ') + 1, -4);
@@ -92,6 +99,14 @@ readPdf.then(inputLines => {
             }
             entry[letter] = entry[letter].slice(3, -1);
         }
+    }
+
+    const todoQuestion = output.find(x => {
+        return !x.question.endsWith('?') || x.correct.contains('unknown');
+    });
+
+    if (todoQuestion.length > 0) {
+        console.error('Questions need manual review:', todoQuestion.map(x => x.number).join(', '));
     }
 
     // First element is always empty - remove it.

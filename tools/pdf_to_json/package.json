@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "pdfkit": "^0.13.0",
     "pdfreader": "^1.2.14"
   }
 }
