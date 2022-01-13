@@ -445,7 +445,7 @@
     "number": 50,
     "correct": "A",
     "A": "image:img/class_02/ground.svg",
-    "B": "image:img/class_02/didoe.svg",
+    "B": "image:img/class_02/diode.svg",
     "C": "image:img/class_02/battery.svg",
     "D": "image:img/class_02/antenna.svg"
   },
@@ -454,7 +454,7 @@
     "number": 51,
     "correct": "D",
     "A": "image:img/class_02/ground.svg",
-    "B": "image:img/class_02/didoe.svg",
+    "B": "image:img/class_02/diode.svg",
     "C": "image:img/class_02/battery.svg",
     "D": "image:img/class_02/antenna.svg"
   },
@@ -463,7 +463,7 @@
     "number": 52,
     "correct": "D",
     "A": "image:img/class_02/ground.svg",
-    "B": "image:img/class_02/didoe.svg",
+    "B": "image:img/class_02/diode.svg",
     "C": "image:img/class_02/battery.svg",
     "D": "image:img/class_02/capacitor.svg"
   },
@@ -490,7 +490,7 @@
     "number": 55,
     "correct": "B",
     "A": "image:img/class_02/ground.svg",
-    "B": "image:img/class_02/didoe.svg",
+    "B": "image:img/class_02/diode.svg",
     "C": "image:img/class_02/battery.svg",
     "D": "image:img/class_02/capacitor.svg"
   },
