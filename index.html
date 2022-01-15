@@ -32,6 +32,21 @@
 			margin: 0;
 			padding: .6em 0;
 		}
+
+		.bar-container, .bar-fill {
+			border-radius: 15px;
+			height: 1em;
+		}
+		.bar-container {
+			background-color: #CFCFCF;
+			width: 100%;
+		}
+		.bar-fill {
+			width: 0%;
+			background-color: #8dbfea;
+			border-radius: 15px;
+			transition: 200ms ease-in-out;
+		}
 	</style>
 
 	<script>
@@ -93,6 +108,10 @@
 					<span class="checkable">D. <img v-bind:src="questions[page].answers.D" width="100px"></span>
 				</label>
 			</fieldset>
+			<br/>
+			<div class="bar-container">
+				<div id="bar-fill" class="bar-fill"></div>
+			</div>
 			<br/>
 			<div role="navigation">
 				<button class="pseudo prev" v-if="page !== 0" v-on:click="prevAnswer">
@@ -180,6 +199,7 @@
 					if (this.answers[this.page]) {
 						document.querySelector(`input[value=${this.answers[this.page]}]`).checked = true;
 					}
+					document.getElementById('bar-fill').style.width = `${(this.page / this.questions.length) * 100}%`;
 				}
 			},
 		});
